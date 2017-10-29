@@ -6,7 +6,7 @@ Python 3
 
 ## How to use this program.
 
-First, Define variables in settings.py. You need to define following variables to use the program:
+**First**, Define variables in settings.py. You need to define following variables to use the program:
 
 | variable | type | default | explanations |
 | -------- | :--: | :--------: |------------ |
@@ -63,12 +63,18 @@ describe('Email', function() {
 
 ```
 
-Second, place generateAndRunATest.py, settings.py and testcases.py in the same folder as SpecRunner.html in the default Jasmine file hierarchy. The program make a directory of the same name as variableName and place a spec file there. If this is a problem, rename your existing directory.
+**Second**, place generateAndRunATest.py, settings.py and testcases.py in the same folder as SpecRunner.html in the default Jasmine file hierarchy. The program make a directory of the same name as variableName and place a spec file there. If this is a problem, rename the existing directory.
 
-3. Place your test data in testcases.py
+**Thrid**, place your test data in testcases.py. Each line in the file contains a category of an input and the input itself, which are separated by a comma. For example, 2 testcases for the example above are:
 
-4. Open a terminal in the directory of this program
+```
+number, 123456
+good email, myemail@gmail.com
 
-5. Type "python generateAndRunATest.py"
+```
 
-6. Open Spec.Runner.html in your browser.
+**Forth**, open a terminal in the directory of this program
+
+**Fifth**, type "python generateAndRunATest.py"
+
+**Sixth**, open Spec.Runner.html in your browser.
