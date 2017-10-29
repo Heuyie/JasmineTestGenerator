@@ -6,9 +6,22 @@ Python 3
 
 ## How to use this program.
 
-1. In the default Jasmine file hierarchy, place generateAndRunATest.py, settings.py and testcases.py in the same folder as SpecRunner.html.
+1. Define variables in settings.py
 
-2. Define variables in settings.py
+You need to define following variables to use the program:
+
+| variable | type | default | explanations |
+| -------- | :--: | :--------: |------------ |
+| beforeEach | string | '' | If you need the beforeEach function, add javascript codes as a string. If not, leave it to be ''.|
+| afterEach | string | '' | If you need the afterEach function, add javascript codes as a string. If not, leave it to be ''.|
+| testClass | string | '' | The first argument of a describe function. |
+| functionHeaderDict | dictionary | {'default':''} | The argument of a expect function. You can define this variable for each testcase category. |
+| toEqualDict | dictionary | {'default':''}  | The argument of a toEqual function. You can define this variable for each testcase category. |
+| variableName | string | '' | The name of the variable you want to test. |
+| included | array | [ ] | The array of testcase category names you want to include in a test. |
+| accepted | array | [ ] | The array of testcase category names you want to accept in a test. |
+
+2. In the default Jasmine file hierarchy, place generateAndRunATest.py, settings.py and testcases.py in the same folder as SpecRunner.html.
 
 3. Place your test data in testcases.py
 
