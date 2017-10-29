@@ -70,7 +70,6 @@ describe('Email', function() {
 ```
 number, 123456
 good email, myemail@gmail.com
-
 ```
 
 **Forth**, open a terminal in the directory of this program
