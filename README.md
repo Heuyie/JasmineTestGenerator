@@ -21,6 +21,50 @@ You need to define following variables to use the program:
 | included | array | [ ] | The array of testcase category names you want to include in a test. |
 | accepted | array | [ ] | The array of testcase category names you want to accept in a test. |
 
+For example, with 2 testcases, 
+```
+beforeEach = "email = undefined;\n    console.log('new test');"
+afterEach = "console.log('A test is over!');"
+
+testClass = 'Email'
+
+variableName = 'email'
+
+included = ['number', 'good email']
+accepted = ['good email']
+functionHeaderDict = {'all':'validateEmail(email)'}
+toEqualDict = {'accepted':'true', 'rejected':'false'}
+
+```
+These values produce the following tests:
+
+```
+describe('Email', function() {
+  var email;
+
+  beforeEach(function() {
+    email = undefined;
+    console.log('new test');
+  });
+
+  afterEach(function() {
+    console.log('A test is over!');
+  });
+
+  it('should reject number', function() {
+    email = 123456;
+    expect(validateEmail(email)).toEqual(false);
+  });
+
+  it('should accept good email', function() {
+    email = 'myemail@gmail.com';
+    expect(validateEmail(email)).toEqual(true);
+  });
+
+});
+
+```
+
 2. In the default Jasmine file hierarchy, place generateAndRunATest.py, settings.py and testcases.py in the same folder as SpecRunner.html.
 
 3. Place your test data in testcases.py
