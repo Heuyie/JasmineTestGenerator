@@ -76,4 +76,4 @@ good email, myemail@gmail.com
 
 **Fifth**, type "python generateAndRunATest.py"
 
-**Sixth**, open Spec.Runner.html in your browser.
+**Sixth**, open SpecRunner.html in your browser.
