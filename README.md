@@ -6,9 +6,7 @@ Python 3
 
 ## How to use this program.
 
-1. Define variables in settings.py
-
-You need to define following variables to use the program:
+First, Define variables in settings.py. You need to define following variables to use the program:
 
 | variable | type | default | explanations |
 | -------- | :--: | :--------: |------------ |
@@ -65,7 +63,7 @@ describe('Email', function() {
 
 ```
 
-2. In the default Jasmine file hierarchy, place generateAndRunATest.py, settings.py and testcases.py in the same folder as SpecRunner.html.
+Second, place generateAndRunATest.py, settings.py and testcases.py in the same folder as SpecRunner.html in the default Jasmine file hierarchy. The program make a directory of the same name as variableName and place a spec file there. If this is a problem, rename your existing directory.
 
 3. Place your test data in testcases.py
 
